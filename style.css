@@ -1,3 +1,10 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 2vh;
+}
 .container {
   /* Used to position the input */
   position: relative;
@@ -34,7 +41,7 @@
 
   flex-direction: row-reverse;
 
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .rating__star:hover,
@@ -48,7 +55,7 @@ Note that we use `flex-direction: row-reverse` on the container
 */
 .rating__star:hover:before,
 .rating__star:hover ~ .rating__star:before {
-  color: #00449e;
+  color: purple;
   content: "\2605";
   left: 0;
   position: absolute;
@@ -63,4 +70,103 @@ Note that we use `flex-direction: row-reverse` on the container
 
   /* Used to position the hover state */
   position: relative;
+}
+
+.chip {
+  /* Center the content */
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+
+  /* Background color */
+  background-color: rgba(0, 0, 0, 0.1);
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Spacing */
+  padding: 4px 8px;
+}
+
+.chip__content {
+  margin-right: 4px;
+}
+
+.button {
+  /* Reset */
+  background-color: transparent;
+  border-color: transparent;
+
+  /* Cursor */
+  cursor: pointer;
+
+  /* Size */
+  height: 32px;
+  width: 32px;
+
+  /* Used to position the inner */
+  position: relative;
+}
+
+.button__line {
+  /* Background color */
+  background-color: rgba(0, 0, 0, 0.3);
+
+  /* Position */
+  position: absolute;
+
+  /* Size */
+  height: 1px;
+  width: 100%;
+}
+
+.button__line--first {
+  /* Position */
+  left: 0px;
+  top: 50%;
+  transform: translate(0%, -50%) rotate(45deg);
+
+  /* Size */
+  height: 1px;
+  width: 100%;
+}
+
+.button__line--second {
+  /* Position */
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0%) rotate(45deg);
+
+  /* Size */
+  height: 100%;
+  width: 1px;
+}
+
+.dots {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Reset styles */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dots__item {
+  /* Rounded border */
+  border-radius: 30%;
+  height: 15px;
+  width: 15px;
+
+  /* Active dot */
+  background-color: red;
+
+  /* Inactive dot */
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  /* OPTIONAL: Spacing between dots */
+  margin: 0 4px;
 }
